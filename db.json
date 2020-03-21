@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "name": "vadla viswanath",
+      "mobile": "9441403658",
+      "dob": "2020-03-08",
+      "id": 1
+    },
+    {
+      "name": "viswanath",
+      "mobile": "9764138746",
+      "dob": "1994-02-24",
+      "id": 2
+    },
+    {
+      "name": "Line Chart Widget",
+      "mobile": "+919441403658",
+      "dob": "2020-03-16",
+      "id": 3
+    }
+  ]
+}
