@@ -1,0 +1,28 @@
+<form class="col-sm-8 col-sm-offset-2">
+
+  <div class="form-group">
+    <label>country</label>
+    <select class="form-control" name="country" [(ngModel)]="country" (change)="getState($event.target.value)">
+      <option value="">select country</option>
+      <option *ngFor="let countries of countryData" value="{{countries.id}}">{{countries.country}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>state</label>
+    <select class="form-control" name="state" [(ngModel)]="state" (change)="getCity($event.target.value)">
+      <option value="">select state</option>
+      <option *ngFor="let states of stateData" value="{{states.id}}">{{states.state}}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>city</label>
+    <select class="form-control" name="city" [(ngModel)]="city">
+      <option value="">select city</option>
+      <option *ngFor="let cities of cityData">{{cities.city}}</option>
+    </select>
+  </div>
+
+
+</form>
