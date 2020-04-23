@@ -1,0 +1,32 @@
+<h3>visu</h3>
+<button class="btn btn-danger" (click)="display()">display</button>
+
+<div class="container">
+
+  <table class="table table-bordered">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Deignation</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let obj of arrayOfData">
+        <td>{{obj.name}}</td>
+        <td>{{obj.mobile}}</td>
+        <td>{{obj.Designation}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+</div>
+
+<div class=" container custom">
+  <h4>1st component</h4>
+  <input type="text" [(ngModel)]="Val">
+  <button class="btn btn-warning" (click)="passData(Val)">Send data to another component</button>
+</div>
