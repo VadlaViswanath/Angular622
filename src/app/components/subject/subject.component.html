@@ -27,6 +27,6 @@
 
 <div class=" container custom">
   <h4>1st component</h4>
-  <input type="text" [(ngModel)]="Val">
-  <button class="btn btn-warning" (click)="passData(Val)">Send data to another component</button>
+  <input type="text" [(ngModel)]="user.Val"  #val>
+  <button class="btn btn-warning" (click)="passData()">Send data to another component</button>
 </div>

@@ -17,6 +17,12 @@ export class SubjectService {
     //Subject
    subject = new Subject();
 //================
+
+  passData(data){
+    this.subject.next(data);
+  }
+
+//=================
   sendData(){
     this.subject.next(this.arrayData);
     // console.log(this.arrayData);
