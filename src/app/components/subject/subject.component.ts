@@ -9,7 +9,7 @@ import { SubjectService } from 'src/app/services/subject.service';
 })
 export class SubjectComponent implements OnInit {
 
-  
+  user={};
   arrayOfData:any = [];
 
   constructor(private _Sservice:SubjectService) { 
