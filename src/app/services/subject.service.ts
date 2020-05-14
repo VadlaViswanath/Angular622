@@ -16,6 +16,7 @@ export class SubjectService {
 
     //Subject
    subject = new Subject();
+  //  subject = new Subject();
 //================
 
   passData(data){
