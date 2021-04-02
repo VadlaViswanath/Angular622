@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SubjectService } from 'src/app/services/subject.service';
+import { Subject2Component } from '../subject2/subject2.component';
 
 
 @Component({
@@ -11,41 +12,53 @@ export class SubjectComponent implements OnInit {
 
   user={};
   arrayOfData:any = [];
-
+  @ViewChild(Subject2Component) nameChange:Subject2Component;
   constructor(private _Sservice:SubjectService) { 
     
   }
 
-//   passData(Val){
-//     this._Sservice.subject.next(Val);
-// }
+  NameChange(){
+    // this.nameChange.employeeName="visu";
+    this.nameChange.nChange();
+  }
 
+  // check = document.getElementById('check');
 passData(){
   // this._Sservice.subject.next(this.user);
-  this._Sservice.passData(this.user);
+  // this._Sservice.passData(this.user);
+   console.log(this.user);
   this.user={};
 }
 
    ngOnInit() {
     // this._Sservice.getData()
-    // // .pipe(filter(re=> {
-    // //   re.name === "visu" }))
     // .subscribe( (data) =>{
     //   this.arrayOfData = data;
-    // });    
+    // });   
+
+    //============
+    //Promise
+    // this._Sservice.prs.then((x)=>{
+    //   console.log(x);
+    // });
+
+    //=============
+    //observble
+  // this._Sservice.obs.subscribe((data) =>{
+  //     console.log(data);
+  //   }); 
    }
 
 display(){
-  this._Sservice.sendData();
+  // this._Sservice.sendData();
   //====
 
-
   //observble
-  // this._Sservice.observable.subscribe((data) =>{
-  //     this.arrayOfData = data;
-  //     // console.log(data);
-  //   });    
-
+  this._Sservice.obs.subscribe((data) =>{
+      this.arrayOfData = data;
+      console.log(data);
+    }); 
+    
 }
 
 

@@ -1,0 +1,25 @@
+<h2 class="text-center">
+  items-details Page!
+</h2>
+
+<div class="container">
+  <table class="table table-bordered">
+      <thead>
+          <tr>
+              <th>Customer Name</th>
+              <th>Items Name</th>
+              <th>Price</th>
+              <th>Address</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr *ngFor="let items of itemDetails">
+            <td>{{items.customerName}}</td>
+            <td>{{items.itemsName}}</td>
+            <td>{{items.price}}</td>
+            <td>{{items.address}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

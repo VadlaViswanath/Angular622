@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Date of Birth</th>
+          <th>Gender</th>
+          <th>qualification</th>
+          <th>Email</th>
+          <th>Skills</th>
+      </tr>
+  </thead>
+
+  <tbody>
+      <tr *ngFor="let data of (employees | sort)">
+          <td>{{data.name}}</td>
+          <td>{{data.dob | date:"fullDate"}}</td>
+          <td>{{data.gender}}</td>
+          <td>{{data.qualification}}</td>
+          <td>{{data.Email}}</td>
+          <td>{{data.skills}}</td>
+      </tr>
+  </tbody>
+</table>

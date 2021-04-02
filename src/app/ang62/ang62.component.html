@@ -1,4 +1,4 @@
-<input type="text" [(ngModel)]="username" name="username">
+<!-- <input type="text" [(ngModel)]="username" name="username">
 <button (click)="search()">Search</button>
 <br><br>
 <div *ngIf="response">
@@ -7,4 +7,9 @@
 <p>Number of gists:{{response.public_gists}}</p>
 <p>Number of followers:{{response.followers}}</p>
 
-</div>
+</div> -->
+
+<form>
+    <input type="text" [(ngModel)]="searchData" name="search">
+    <button (click)="getData()">getData</button>
+</form>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ang6ServiceService } from '../ang6-service.service';
+import { Ang6ServiceService } from '../services/ang6-service.service';
 
 @Component({
   selector: 'app-ang6-comp',

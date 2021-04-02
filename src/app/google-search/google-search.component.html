@@ -1,0 +1,6 @@
+Input Search:<input type="text" name="search"  [(ngModel)]="inputSearch">
+<input type="button" value="search" (click)="search()">   
+
+<ul>
+<li *ngFor="let result of results2">{{result.id}}--{{result.name}}--{{result.mobile}}</li>
+</ul>

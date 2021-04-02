@@ -1,0 +1,53 @@
+
+<div>
+  <span>
+    <input type="checkbox" (change)="selectAll()">Select All
+  </span>
+</div>
+
+<!-- <div>
+  <span>
+    <input type="checkbox" (change)="cseBranchAll()" [(ngModel)]="cseBranchChecked">CSE Branch
+  </span>
+</div>
+<div *ngFor="let data of cseBranch">
+  <span>
+    <input type="checkbox" >{{data.name}}
+  </span>
+</div> -->
+
+<div>
+  <span>
+    <input type="checkbox" (change)="electricalBranchAll()" [(ngModel)]="electricalBranchChecked">ELECTRICAL Branch
+  </span>
+</div>
+<div *ngFor="let data of electricalBranch">
+  <span>
+    <input type="checkbox" name="{{data.id}}" [value]="data.id" (change)="getId($event,data.id)">{{data.name}}
+    <!-- [(ngModel)]="electricalIndividual" -->
+  </span>
+</div>
+
+<!-- <div>
+  <span>
+    <input type="checkbox" (change)="civilBranchAll()" [(ngModel)]="civilBranchChecked">CIVIL Branch
+  </span>
+</div>
+<div *ngFor="let data of civilBranch">
+  <span>
+    <input type="checkbox" >{{data.name}}
+  </span>  
+</div> -->
+
+
+<!-- <div>
+  <span>
+    <input type="checkbox" (change)="mechanicalBranchAll()" [(ngModel)]="mechanicalBranchChecked">MECHANICAL Branch
+  </span>
+</div>
+<div *ngFor="let data of mechanical">
+  <span>
+    <input type="checkbox" >{{data.name}}
+  </span>
+    
+</div> -->

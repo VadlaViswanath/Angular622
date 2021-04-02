@@ -36,20 +36,18 @@ export class SubjectService {
 
 
     //Observable
-    // observable = new Observable((obs)=>{
-    //     obs.next(this.arrayData);
-    // })
+    obs = new Observable((obs)=>{
+        obs.next(this.arrayData);
+            // obs.next("data send");
+    })
 
+    //Promise
+      prs = new Promise((pro)=>{
+        pro("this.arrayData");
+        pro("data send successfully")
+      });
 
    constructor() {}
   
    
-
-
-   
-  
-    
-   
-
-
 }

@@ -27,6 +27,12 @@
 
 <div class=" container custom">
   <h4>1st component</h4>
-  <input type="text" [(ngModel)]="user.Val"  #val>
-  <button class="btn btn-warning" (click)="passData()">Send data to another component</button>
+  <form #myForm="ngForm" (ngSubmit)="passData()">
+  <input type="text" [(ngModel)]="user.Val" name="value" required>
+  <input type="checkbox" [(ngModel)]="user.active" name="check" id="check" required>
+  <button class="btn btn-warning" type="submit" >Send data to another component</button>
+  </form>
+  <button (click)="NameChange()">NameChange</button>
 </div>
+
+<app-subject2></app-subject2>

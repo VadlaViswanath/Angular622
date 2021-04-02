@@ -1,0 +1,25 @@
+<h2 class="text-center">
+  Items-list Page!
+</h2>
+<!-- <button class="btn btn-info" (click)="staus()">Next</button> -->
+<div class="container">
+  <table class="table table-bordered">
+      <thead>
+          <tr>
+              <th>Customer Name</th>
+              <th>Items</th>
+              <th>Total Price</th>
+              <th>Status</th>
+          </tr>
+      </thead>
+
+      <tbody>
+          <tr *ngFor="let items of itemList; let i= index">
+            <td class="text-primary" (click)="gotoDetails(items)">{{items.customerName}}</td>
+            <td>{{items.items}}</td>
+            <td>{{items.totalPrice}}</td>
+            <td>{{items.status[i]}} <button class="btn btn-info" (click)="staus(items,i)">Next</button></td>
+          </tr>
+      </tbody>
+  </table>
+</div>

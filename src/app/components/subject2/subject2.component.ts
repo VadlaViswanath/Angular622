@@ -9,7 +9,12 @@ import { map ,filter} from 'rxjs/operators';
 export class Subject2Component implements OnInit {
 
   developer:any =["suma","guna"];
+  employeeName:string="guna";
   constructor(private _Sservice:SubjectService) { }
+
+  nChange(){
+    this.employeeName="suma";
+  }
 
   ngOnInit() {
     this._Sservice.getData()
